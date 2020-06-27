@@ -1,0 +1,15 @@
+basic.show_icon(IconNames.HAPPY)
+basic.pause(500)
+mbit_小车类.car_ctrl_speed2(mbit_小车类.CarState.CAR_RUN, 80, 30)
+basic.pause(3600)
+
+def on_forever():
+    mbit_小车类.car_ctrl(mbit_小车类.CarState.CAR_STOP)
+    basic.pause(50)
+    mbit_小车类.car_ctrl_speed2(mbit_小车类.CarState.CAR_RUN, 30, 80)
+    basic.pause(4400)
+    mbit_小车类.car_ctrl(mbit_小车类.CarState.CAR_STOP)
+    basic.pause(50)
+    mbit_小车类.car_ctrl_speed2(mbit_小车类.CarState.CAR_RUN, 80, 30)
+    basic.pause(4400)
+basic.forever(on_forever)
